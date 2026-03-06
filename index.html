@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ag Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">Ag<span>Studio</span></a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Creamos Experiencias <span>Digitales</span> Increíbles</h1>
+                <p class="hero-subtitle">Transformamos tus ideas en aplicaciones web y móviles de alto rendimiento.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Empezar Proyecto</a>
+                    <a href="#portafolio" class="btn btn-secondary">Ver Trabajos</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="window-content">
+                        <code>
+                            <span class="code-keyword">const</span> <span class="code-variable">agStudio</span> = {<br>
+                            &nbsp;&nbsp;<span class="code-property">servicio</span>: <span class="code-string">"Desarrollo Web"</span>,<br>
+                            &nbsp;&nbsp;<span class="code-property">calidad</span>: <span class="code-string">"Premium"</span>,<br>
+                            &nbsp;&nbsp;<span class="code-property">pasión</span>: <span class="code-string">"Innovación"</span><br>
+                            };
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre Nosotros</span>
+                <h2 class="section-title">¿Quién es <span>Ag Studio</span>?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Somos una agencia de desarrollo web y apps digitales comprometida con la excelencia técnica y el diseño innovador. Nos especializamos en crear soluciones digitales que impulsan el crecimiento de tu negocio.</p>
+                    <p>Nuestro equipo combina creatividad y tecnología para transformar tus ideas en productos digitales funcionales, escalables y visualmente atractivos.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="13">0</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-label">Clientes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Años</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Velocidad</h3>
+                        <p>Optimización de rendimiento para experiencias fluidas</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad</h3>
+                        <p>Estándares altos de protección de datos</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive</h3>
+                        <p>Diseños adaptables a todos los dispositivos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title">Lo que <span>Ofrecemos</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web modernos, rápidos y optimizados para SEO. Desde landing pages hasta plataformas complejas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Apps Móviles</h3>
+                    <p>Aplicaciones nativas e híbridas para iOS y Android con experiencia de usuario excepcional.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Interfaces atractivas y funcionales que mejoran la experiencia del usuario.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Tiendas online completas con pasarelas de pago y gestión de inventario.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend & APIs</h3>
+                    <p>Desarrollo de servidores robustos, APIs RESTful y bases de datos escalables.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Despliegue y mantenimiento en la nube con las mejores prácticas DevOps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portafolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portafolio</span>
+                <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+            </div>
+            <div class="portfolio-grid">
+                <a href="https://agstudio98.github.io/SportCar/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SportCar</h3>
+                        <p>Plataforma visual dedicada a autos deportivos</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/SearchJobs/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SearchJob</h3>
+                        <p>Aplicación web conceptual para búsqueda de empleos</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Imagine/main.html" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-film"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Imagine</h3>
+                        <p>Plataforma conceptual de streaming con carrusel animado</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CreamNuke/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CreamNuke</h3>
+                        <p>Plataforma web para una heladería moderna</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Botique/main.html" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Botique</h3>
+                        <p>Landing page minimalista para una boutique online</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CloudShoes/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CloudShoes</h3>
+                        <p>Tienda online conceptual de ropa y calzado</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/MicroForm/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MicroForm</h3>
+                        <p>Landing page para servicios de hosting y cloud</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/SportFit/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-running"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SportFit</h3>
+                        <p>Web premium de calzado deportivo y branding</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/StreamOut/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>StreamOut</h3>
+                        <p>Plataforma de streaming premium</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Vinoteca/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Vinoteca</h3>
+                        <p>Plataforma premium dedicada al mundo del vino</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CakeCheapful/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CakeCheapful</h3>
+                        <p>Sitio web institucional para una pastelería</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/FiloBooks/" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>FiloBook's</h3>
+                        <p>Plataforma digital de e-books y servicios editoriales</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Boticario/main.html" target="_blank" class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Boticario</h3>
+                        <p>Plataforma web para exploración y compra de libros online</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">Hablemos de tu <span>Proyecto</span></h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Agustinnicolasgallardor@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>3516137059</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Cordoba, Argentina</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/agstudio98" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/agustin-gallardo-922b461a1/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ag.studio.98/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Ag<span>Studio</span></a>
+                    <p>Creando experiencias digitales extraordinarias.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Apps Móviles</a></li>
+                        <li><a href="#">Diseño UI/UX</a></li>
+                        <li><a href="#">E-commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ag Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
