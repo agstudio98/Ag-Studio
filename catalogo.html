@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Ag Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">Ag<span>Studio</span></a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Full-Screen Catalog Hero -->
+    <section class="hero-catalog" id="inicio-catalogo">
+        <div class="container hero-catalog-content">
+            <div class="hero-text fade-in" data-delay="0.2">
+                <h1 class="hero-title">Nuestra <span>Excelencia</span> Digital</h1>
+                <p class="hero-subtitle">Un recorrido por nuestras soluciones más innovadoras, desde aplicaciones MERN de alto impacto hasta ejercicios técnicos de vanguardia.</p>
+                <div class="hero-buttons">
+                    <a href="#productos-estrella" class="btn btn-primary">Ver Estrellas</a>
+                    <a href="#explorar-todo" class="btn btn-secondary">Explorar Todo</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Star Products Showcase -->
+    <section class="star-products" id="productos-estrella" style="padding: 100px 0; background: var(--bg-secondary); position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 80px; text-align: center;">
+                <span class="section-tag">Elite Tier</span>
+                <h2 class="section-title">NUESTROS <span>PRODUCTOS ESTRELLA</span></h2>
+                <div class="section-divider"></div>
+                <p style="max-width: 600px; margin: 20px auto; color: var(--text-muted); font-size: 1.1rem;">La cúspide de nuestro desarrollo. Aplicaciones Full-Stack robustas diseñadas para escalar y dominar el mercado digital.</p>
+            </div>
+            
+            <div class="star-grid">
+                <!-- ... existing star cards ... -->
+                <!-- Sorzal -->
+                <div class="star-card fade-in" data-delay="0.2">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>Sorzal <span>(Red Social)</span></h3>
+                        <p>Una experiencia social completa construida con MERN. Incluye feed dinámico, mensajería instantánea mediante WebSockets, perfiles de usuario personalizables y un sistema de notificaciones inteligente. Optimizada para alta disponibilidad y escalabilidad.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> Mensajería en tiempo real</li>
+                            <li><i class="fas fa-check"></i> Feed algorítmico</li>
+                            <li><i class="fas fa-check"></i> Auth JWT Segura</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BeBook -->
+                <div class="star-card fade-in" data-delay="0.4">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-book-open"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>BeBook <span>(Plataforma de Libros)</span></h3>
+                        <p>El paraíso digital para lectores. BeBook permite gestionar bibliotecas personales, realizar reseñas interactivas y explorar un catálogo inmenso con búsqueda facetada. Incluye integración con pasarelas de pago y previsualización de e-books.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> E-reader integrado</li>
+                            <li><i class="fas fa-check"></i> Sistema de reseñas</li>
+                            <li><i class="fas fa-check"></i> Pagos con Stripe</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plasto -->
+                <div class="star-card fade-in" data-delay="0.6">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>Plasto <span>(LMS - Cursos)</span></h3>
+                        <p>Una plataforma de aprendizaje moderna que transforma la educación online. Con streaming de video adaptable, foros de discusión por lección, exámenes interactivos con feedback inmediato y emisión automática de certificados digitales.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> Video Streaming</li>
+                            <li><i class="fas fa-check"></i> Dashboards de progreso</li>
+                            <li><i class="fas fa-check"></i> Certificación Cloud</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Montesco -->
+                <div class="star-card fade-in" data-delay="0.8">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-couch"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>Montesco <span>(Catálogo de Muebles)</span></h3>
+                        <p>La elegancia hecha catálogo. Montesco ofrece una experiencia de compra inmersiva con visualización de alta resolución, filtros de materiales avanzados y una interfaz ultra-minimalista que pone el producto en el centro de la escena.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> UI Ultra-Minimalista</li>
+                            <li><i class="fas fa-check"></i> Filtros de Materiales</li>
+                            <li><i class="fas fa-check"></i> UX Optimizada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Devvia -->
+                <div class="star-card fade-in" data-delay="1.0">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-code-branch"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>Devvia <span>(Comunidad de Devs)</span></h3>
+                        <p>El punto de encuentro definitivo para desarrolladores. Devvia cuenta con repositorios de snippets compartidos, foros técnicos categorizados, sistema de reputación por contribución y una bolsa de trabajo exclusiva para el sector IT.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> Snippet Explorer</li>
+                            <li><i class="fas fa-check"></i> Karma System</li>
+                            <li><i class="fas fa-check"></i> Networking IT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Explorer & Controls -->
+    <section class="catalog-main" id="explorar-todo" style="padding: 100px 0 60px; background: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 40px; text-align: center;">
+                <span class="section-tag">Nuestra Colección</span>
+                <h2 class="section-title">EXPLORA EL <span>CATÁLOGO COMPLETO</span></h2>
+                <div class="section-divider"></div>
+                <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted);">Utiliza nuestras herramientas de búsqueda y filtros para navegar entre nuestra extensa biblioteca técnica.</p>
+            </div>
+
+            <div class="controls-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                <div class="search-box" style="position: relative;">
+                    <i class="fas fa-search" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                    <input type="text" id="projectSearch" placeholder="Buscar proyectos..." style="width: 100%; padding: 12px 12px 12px 45px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; color: var(--text-primary);">
+                </div>
+                <div class="filter-group">
+                    <select id="relevanceFilter" style="width: 100%; padding: 12px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; color: var(--text-primary);">
+                        <option value="all">Relevancia: Todos</option>
+                        <option value="destacado">Destacados</option>
+                        <option value="intermedio">Intermedios</option>
+                        <option value="ejercitacion">Ejercitaciones</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="techFilter" style="width: 100%; padding: 12px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; color: var(--text-primary);">
+                        <option value="all">Tecnología: Todas</option>
+                        <option value="mern">MERN Fullstack</option>
+                        <option value="react">React</option>
+                        <option value="angular">Angular</option>
+                        <option value="no-framework">No-Framework</option>
+                    </select>
+                </div>
+            </div>
+            <div class="catalog-stats" style="margin-bottom: 20px; color: var(--text-muted); font-size: 0.9rem;">
+                Mostrando <span id="projectCount">0</span> proyectos
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portafolio" style="padding-top: 0;">
+        <div class="container">
+            <div class="portfolio-grid" id="catalogGrid">
+                <!-- MERN Featured Projects (Destacados) -->
+                <a href="#" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Sorzal</h3>
+                        <p>Red Social moderna desarrollada con el stack MERN.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>BeBook</h3>
+                        <p>Plataforma premium para amantes de los libros.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Plasto</h3>
+                        <p>Plataforma de cursos online interactiva y escalable.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Montesco</h3>
+                        <p>Catálogo digital de muebles con diseño minimalista.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Devvia</h3>
+                        <p>Comunidad dinámica para desarrolladores profesionales.</p>
+                    </div>
+                </a>
+
+                <!-- MERN Intermediate Projects -->
+                <a href="#" class="portfolio-item" data-relevance="intermedio" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>ShirtGo</h3>
+                        <p>Tienda online de ropa con gestión de inventario MERN.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item" data-relevance="intermedio" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MetroMark</h3>
+                        <p>E-commerce robusto para marketplace digital.</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item" data-relevance="intermedio" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>InduLex</h3>
+                        <p>Plataforma de comercio electrónico para industria legal.</p>
+                    </div>
+                </a>
+
+                <!-- React Projects (Ejercitaciones) -->
+                <a href="https://biblio-match-tm2o.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Bibliomatch</h3><p>Plataforma frontend desarrollada con React.</p></div>
+                </a>
+                <a href="https://designo-quotes.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Designoquotes</h3><p>Aplicación de citas y diseño en React.</p></div>
+                </a>
+                <a href="https://easy-tools-two.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Easytools</h3><p>Herramientas de utilidad creadas con React.</p></div>
+                </a>
+                <a href="https://electro-taus.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Electrotaus</h3><p>E-commerce conceptual de electrónica en React.</p></div>
+                </a>
+                <a href="https://even-target.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Eventarget</h3><p>Gestor de eventos dinámico en React.</p></div>
+                </a>
+                <a href="https://home-rate.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Homerate</h3><p>Plataforma de valoración inmobiliaria en React.</p></div>
+                </a>
+                <a href="https://infinity-pearl-six.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Infinity</h3><p>Landing page futurista desarrollada con React.</p></div>
+                </a>
+                <a href="https://lunix-dev.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Lunixdev</h3><p>Portfolio para desarrolladores en React.</p></div>
+                </a>
+                <a href="https://malastro-store.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Malastrostore</h3><p>Tienda online con arquitectura React.</p></div>
+                </a>
+                <a href="https://malineo-style.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Malineostyle</h3><p>Sitio de moda y estilo visual en React.</p></div>
+                </a>
+                <a href="https://manna-disco.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Mannadisco</h3><p>Interfaz para eventos nocturnos en React.</p></div>
+                </a>
+                <a href="https://nutrix-aroma.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Nutrixaroma</h3><p>Web de bienestar y salud creada con React.</p></div>
+                </a>
+                <a href="https://palastra-deco.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Palastradeco</h3><p>Catálogo de decoración de interiores en React.</p></div>
+                </a>
+                <a href="https://perla-fomme.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>Perla Fomme</h3><p>Sitio premium de joyería en React.</p></div>
+                </a>
+                <a href="https://refracta-tech.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="react">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-react"></i></div></div>
+                    <div class="portfolio-info"><h3>RefractaTech</h3><p>Soluciones tecnológicas visualizadas en React.</p></div>
+                </a>
+
+                <!-- Angular Projects (Ejercitaciones) -->
+                <a href="https://aromatikos.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>Aromatikos</h3><p>Aplicación web desarrollada con Angular.</p></div>
+                </a>
+                <a href="https://art-deco-amber.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>ArtDeco</h3><p>Plataforma de arte y diseño en Angular.</p></div>
+                </a>
+                <a href="https://bar-querencia.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>BarQuerencia</h3><p>Gestión de reservas para bar en Angular.</p></div>
+                </a>
+                <a href="https://casa-rhoades.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>CasaRhoades</h3><p>Portal inmobiliario dinámico en Angular.</p></div>
+                </a>
+                <a href="https://clase-tech.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>ClaseTech</h3><p>Plataforma educativa creada con Angular.</p></div>
+                </a>
+                <a href="https://cream-shop-beta.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>CreamShop</h3><p>E-commerce de heladería en Angular.</p></div>
+                </a>
+                <a href="https://espartano.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>Espartano</h3><p>Web de entrenamiento físico en Angular.</p></div>
+                </a>
+                <a href="https://fine-cute.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>FineCute</h3><p>Tienda de accesorios infantiles en Angular.</p></div>
+                </a>
+                <a href="https://florix-zeta.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>Florix</h3><p>Catálogo de floristería digital en Angular.</p></div>
+                </a>
+                <a href="https://pancarta.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>Pancarta</h3><p>Servicios de diseño gráfico en Angular.</p></div>
+                </a>
+                <a href="https://petz-shop-five.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>PetzShop</h3><p>E-commerce para mascotas en Angular.</p></div>
+                </a>
+                <a href="https://pintu-cord.vercel.app/" class="portfolio-item" data-relevance="ejercitacion" data-tech="angular">
+                    <div class="portfolio-image"><div class="portfolio-placeholder"><i class="fab fa-angular"></i></div></div>
+                    <div class="portfolio-info"><h3>PintuCord</h3><p>Portal de servicios de pintura en Angular.</p></div>
+                </a>
+
+                <!-- No-Framework Projects -->
+                <a href="https://agstudio98.github.io/TechZol/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>TechZol</h3>
+                        <p>Plataforma dedicada a casa de informatica</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Montizal/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Montizal</h3>
+                        <p>Plataforma dedicada a perfumeria</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/TrekHome/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>TrekHome</h3>
+                        <p>Plataforma visual dedicada a productos de campo.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/SportFit/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SportFit</h3>
+                        <p>Web premium de calzado deportivo y branding</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/StreamOut/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>StreamOut</h3>
+                        <p>Plataforma de streaming premium</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Vinoteca/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Vinoteca</h3>
+                        <p>Plataforma premium dedicada al mundo del vino</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/MikLouds/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MikLouds</h3>
+                        <p>Plataforma Relacionada a productos de alimienticia sana</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/BookingHome/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>BookingHome</h3>
+                        <p>Plataforma inmobiliaria</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/AkaLearn/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AkaLearn</h3>
+                        <p>Plataforma dedicado a cursos</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/HostalPort/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>HostalPort</h3>
+                        <p>Plataforma dedicado a ventas de Hoteles</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/MarkThings/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MarkThings</h3>
+                        <p>Agencia de Marketing</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/ProtoSport/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>ProtoSport</h3>
+                        <p>Plataforma sobre indumentaria deportiva.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/FoodMax/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>FoodMax</h3>
+                        <p>Plataforma dedicada a servicios de comida.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/LexyHelados/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Lexy Helados</h3>
+                        <p>Plataforma dedicada a una heladeria.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/DonellClock/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Donell Clock</h3>
+                        <p>Plataforma dedicada a una tienda de relojes.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/AmpartaBox/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Amparta Box</h3>
+                        <p>Plataforma dedicada a Box HomeOffice de Trabajo.</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/SportCar/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SportCar</h3>
+                        <p>Plataforma visual dedicada a autos deportivos</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/SearchJobs/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SearchJob</h3>
+                        <p>Aplicación web conceptual para búsqueda de empleos</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Imagine/main.html" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Imagine</h3>
+                        <p>Plataforma conceptual de streaming con carrusel animado</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CreamNuke/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CreamNuke</h3>
+                        <p>Plataforma web para una heladería moderna</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Botique/main.html" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Botique</h3>
+                        <p>Landing page minimalista para una boutique online</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CloudShoes/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CloudShoes</h3>
+                        <p>Tienda online conceptual de ropa y calzado</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/MicroForm/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MicroForm</h3>
+                        <p>Landing page para servicios de hosting y cloud</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/CakeCheapful/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CakeCheapful</h3>
+                        <p>Sitio web institucional para una pastelería</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/FiloBooks/" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>FiloBook's</h3>
+                        <p>Plataforma digital de e-books y servicios editoriales</p>
+                    </div>
+                </a>
+                <a href="https://agstudio98.github.io/Boticario/main.html" target="_blank" class="portfolio-item" data-relevance="ejercitacion" data-tech="no-framework">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Boticario</h3>
+                        <p>Plataforma web para exploración y compra de libros online</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Pagination -->
+            <div id="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 50px; margin-bottom: 50px;">
+                <!-- Pagination buttons will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Ag<span>Studio</span></a>
+                    <p>Creando experiencias digitales extraordinarias.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ag Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
