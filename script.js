@@ -69,29 +69,25 @@ function initCatalogFilters() {
         const startIndex = (page - 1) * projectsPerPage;
         const endIndex = startIndex + projectsPerPage;
 
-        // Hide all
-        allProjects.forEach(p => p.style.display = 'none');
+        // Hide all with transition
+        allProjects.forEach(p => {
+            p.style.display = 'none';
+            p.style.opacity = '0';
+        });
 
-        // Show slice
-        filteredProjects.slice(startIndex, endIndex).forEach(p => {
+        // Show slice with delay/animation
+        filteredProjects.slice(startIndex, endIndex).forEach((p, index) => {
             p.style.display = 'block';
-            p.style.opacity = '1';
-            p.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                p.style.opacity = '1';
+                p.style.transform = 'translateY(0)';
+            }, index * 50);
         });
 
-        // Update active class on pagination buttons
-        const buttons = paginationContainer.querySelectorAll('.btn-page');
-        buttons.forEach((btn) => {
-            if (parseInt(btn.textContent) === page) {
-                btn.style.background = 'var(--text-primary)';
-                btn.style.color = 'var(--text-contrast)';
-            } else {
-                btn.style.background = 'var(--bg-tertiary)';
-                btn.style.color = 'var(--text-primary)';
-            }
-        });
+        // Update pagination buttons
+        renderPagination();
 
-        // Scroll to the top of the catalog explorer section, not the top of the page
+        // Scroll to the top of the catalog explorer section
         const explorerSection = document.getElementById('explorar-todo');
         if (explorerSection) {
             const headerHeight = document.getElementById('header').offsetHeight;
@@ -106,57 +102,71 @@ function initCatalogFilters() {
 
         if (totalPages <= 1) return;
 
-        // Previous Arrow
-        if (currentPage > 1) {
-            const prevBtn = createPageBtn('<i class="fas fa-chevron-left"></i>', () => showPage(currentPage - 1));
-            paginationContainer.appendChild(prevBtn);
-        }
+        // Responsive number of buttons
+        const isMobile = window.innerWidth < 500;
+        const maxVisible = isMobile ? 3 : 5;
 
-        // Show a sliding window of page numbers
-        const maxVisible = 12; // Show more buttons as requested
-        let startPage = Math.max(1, currentPage - 2);
+        // Previous Arrow
+        const prevBtn = createPageBtn('<i class="fas fa-chevron-left"></i>', () => showPage(currentPage - 1));
+        if (currentPage === 1) prevBtn.disabled = true;
+        paginationContainer.appendChild(prevBtn);
+
+        // Calculate sliding window
+        let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
         let endPage = Math.min(totalPages, startPage + maxVisible - 1);
 
         if (endPage - startPage < maxVisible - 1) {
             startPage = Math.max(1, endPage - maxVisible + 1);
         }
 
+        // Ellipsis and First Page
+        if (startPage > 1) {
+            paginationContainer.appendChild(createPageBtn(1, () => showPage(1)));
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.margin = '0 5px';
+                paginationContainer.appendChild(dots);
+            }
+        }
+
         for (let i = startPage; i <= endPage; i++) {
             const btn = createPageBtn(i, () => showPage(i));
             if (i === currentPage) {
-                btn.style.background = 'var(--text-primary)';
-                btn.style.color = 'var(--text-contrast)';
+                btn.classList.add('active');
             }
             paginationContainer.appendChild(btn);
         }
 
-        // Next Arrow
-        if (currentPage < totalPages) {
-            const nextBtn = createPageBtn('<i class="fas fa-chevron-right"></i>', () => showPage(currentPage + 1));
-            paginationContainer.appendChild(nextBtn);
+        // Ellipsis and Last Page
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.margin = '0 5px';
+                paginationContainer.appendChild(dots);
+            }
+            paginationContainer.appendChild(createPageBtn(totalPages, () => showPage(totalPages)));
         }
+
+        // Next Arrow
+        const nextBtn = createPageBtn('<i class="fas fa-chevron-right"></i>', () => showPage(currentPage + 1));
+        if (currentPage === totalPages) nextBtn.disabled = true;
+        paginationContainer.appendChild(nextBtn);
     }
 
     function createPageBtn(content, onClick) {
         const btn = document.createElement('button');
         btn.innerHTML = content;
-        btn.className = 'btn btn-page';
-        btn.style.cssText = `
-            padding: 8px 16px;
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border-strong);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: var(--transition-fast);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 45px;
-        `;
+        btn.className = 'btn-page';
         btn.addEventListener('click', onClick);
         return btn;
     }
+
+    // Add resize listener for responsive pagination
+    window.addEventListener('resize', () => {
+        renderPagination();
+    });
 
     // Event listeners
     searchInput.addEventListener('input', updateCatalog);
@@ -231,11 +241,14 @@ function initHeader() {
 function initMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');
     const nav = document.getElementById('nav');
+    const navOverlay = document.getElementById('navOverlay');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    menuToggle.addEventListener('click', () => {
+    const toggleMenu = () => {
         nav.classList.toggle('active');
         menuToggle.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         
         // Animate hamburger menu
         const spans = menuToggle.querySelectorAll('span');
@@ -248,32 +261,18 @@ function initMobileMenu() {
             spans[1].style.opacity = '1';
             spans[2].style.transform = 'none';
         }
-    });
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
 
     // Close menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            menuToggle.classList.remove('active');
-            
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+            if (nav.classList.contains('active')) {
+                toggleMenu();
+            }
         });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-            nav.classList.remove('active');
-            menuToggle.classList.remove('active');
-            
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
     });
 }
 
