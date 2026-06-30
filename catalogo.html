@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Ag Studio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><style>svg { color: %23000000; } @media (prefers-color-scheme: dark) { svg { color: %23ffffff; } }</style><rect x='5' y='2' width='14' height='20' rx='2' ry='2'/><path d='M12 18h.01'/></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,21 +66,20 @@
             </div>
             
             <div class="star-grid">
-                <!-- ... existing star cards ... -->
-                <!-- Sorzal -->
-                <a href="https://sorzal.onrender.com" target="_blank" class="star-card fade-in" data-delay="0.2" style="text-decoration: none; display: flex;">
+                <!-- EcoDev -->
+                <a href="https://ecodev-i3nw.onrender.com" target="_blank" class="star-card fade-in" data-delay="0.2" style="text-decoration: none; display: flex;">
                     <div class="star-visual">
                         <i class="fab fa-react"></i>
                         <i class="fas fa-leaf mongo-icon"></i>
-                        <div class="star-icon-main"><i class="fas fa-users"></i></div>
+                        <div class="star-icon-main"><i class="fas fa-seedling"></i></div>
                     </div>
                     <div class="star-info">
-                        <h3>Sorzal <span>(Red Social)</span></h3>
-                        <p>Una experiencia social completa construida con MERN. Incluye feed dinámico, mensajería instantánea mediante WebSockets, perfiles de usuario personalizables y un sistema de notificaciones inteligente. Optimizada para alta disponibilidad y escalabilidad.</p>
+                        <h3>EcoDev <span>(Desarrollo Sostenible)</span></h3>
+                        <p>Una plataforma innovadora que conecta la tecnología con el cuidado del medio ambiente. EcoDev permite calcular la huella de carbono personal y corporativa, compartir iniciativas ecológicas y coordinar proyectos sustentables en comunidad.</p>
                         <ul class="star-features">
-                            <li><i class="fas fa-check"></i> Mensajería en tiempo real</li>
-                            <li><i class="fas fa-check"></i> Feed algorítmico</li>
-                            <li><i class="fas fa-check"></i> Auth JWT Segura</li>
+                            <li><i class="fas fa-check"></i> Calculadora ecológica</li>
+                            <li><i class="fas fa-check"></i> Proyectos comunitarios</li>
+                            <li><i class="fas fa-check"></i> Métricas de impacto</li>
                         </ul>
                     </div>
                 </a>
@@ -155,6 +155,24 @@
                         </ul>
                     </div>
                 </a>
+
+                <!-- Sorzal -->
+                <a href="https://sorzal.onrender.com" target="_blank" class="star-card fade-in" data-delay="1.2" style="text-decoration: none; display: flex;">
+                    <div class="star-visual">
+                        <i class="fab fa-react"></i>
+                        <i class="fas fa-leaf mongo-icon"></i>
+                        <div class="star-icon-main"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="star-info">
+                        <h3>Sorzal <span>(Red Social - En Desarrollo)</span></h3>
+                        <p>Una experiencia social completa construida con MERN. Incluye feed dinámico, mensajería instantánea mediante WebSockets, perfiles de usuario personalizables y un sistema de notificaciones inteligente. Optimizada para alta disponibilidad y escalabilidad.</p>
+                        <ul class="star-features">
+                            <li><i class="fas fa-check"></i> Mensajería en tiempo real</li>
+                            <li><i class="fas fa-check"></i> Feed algorítmico</li>
+                            <li><i class="fas fa-check"></i> Auth JWT Segura</li>
+                        </ul>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -203,7 +221,8 @@
         <div class="container">
             <div class="portfolio-grid" id="catalogGrid">
                 <!-- MERN Featured Projects (Destacados) -->
-                <a href="https://sorzal.onrender.com" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                <!-- EcoDev -->
+                <a href="https://ecodev-i3nw.onrender.com" target="_blank" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder mern-icons">
                             <i class="fab fa-react"></i>
@@ -212,7 +231,21 @@
                         <div class="featured-badge">DESTACADO</div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Sorzal</h3>
+                        <h3>EcoDev</h3>
+                        <p>Plataforma para promover el desarrollo sostenible y la ecología.</p>
+                    </div>
+                </a>
+                <!-- Sorzal -->
+                <a href="https://sorzal.onrender.com" target="_blank" class="portfolio-item featured" data-relevance="destacado" data-tech="mern">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder mern-icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fas fa-leaf mongo-icon"></i>
+                        </div>
+                        <div class="featured-badge">DESTACADO</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Sorzal (En Desarrollo)</h3>
                         <p>Red Social moderna desarrollada con el stack MERN.</p>
                     </div>
                 </a>
